@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relatorio-pedidos-recusados"
+version = "1.0.0"
+description = "Relatório PySpark de pedidos de 2025 com pagamento recusado e avaliados como legítimos."
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+dependencies = ["pyspark==3.5.3"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.3"]
+
+[project.scripts]
+relatorio-pedidos = "main:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+py-modules = ["main"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
