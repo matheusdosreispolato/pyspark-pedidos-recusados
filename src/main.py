@@ -1,3 +1,6 @@
+import logging
+import sys
+
 from business.relatorio_pedidos import RelatorioPedidosRecusados
 from config.settings import AppConfig
 from data_io.readers import PagamentosReader, PedidosReader
@@ -5,6 +8,8 @@ from data_io.schemas import SchemaProvider
 from data_io.writers import ParquetWriter
 from pipeline.relatorio_pipeline import RelatorioPipeline
 from session.spark_session_manager import SparkSessionManager
+
+logger = logging.getLogger(__name__)
 
 
 def main() -> None:
@@ -23,6 +28,9 @@ def main() -> None:
 
     try:
         pipeline.executar()
+    except Exception:
+        logger.exception("Falha na execução do pipeline")
+        sys.exit(1)
     finally:
         session_manager.stop()
 

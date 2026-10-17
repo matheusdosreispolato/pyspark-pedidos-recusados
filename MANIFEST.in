@@ -1,0 +1,7 @@
+include README.md
+include requirements.txt
+include pyproject.toml
+include Dockerfile
+recursive-include scripts *.sh
+recursive-include tests *.py
+global-exclude __pycache__ *.py[cod]

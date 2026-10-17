@@ -39,7 +39,8 @@ O script `scripts/download_datasets.sh` clona os dois repositórios em `data/inp
 ├── scripts/download_datasets.sh
 ├── Dockerfile
 ├── pyproject.toml
-└── requirements.txt
+├── requirements.txt
+└── MANIFEST.in
 ```
 
 ## Execução com Docker (recomendado, funciona em Linux, macOS e Windows)
