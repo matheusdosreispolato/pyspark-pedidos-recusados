@@ -20,7 +20,7 @@ def pedidos(spark):
         ("p1", "NOTEBOOK", 1500.0, 2, datetime(2025, 3, 10, 8, 0), "SP", 1),
         ("p2", "TABLET", 1100.0, 1, datetime(2025, 1, 5, 9, 0), "SP", 2),
         ("p3", "MONITOR", 600.0, 3, datetime(2025, 2, 1, 10, 0), "RJ", 3),
-        ("p4", "CELULAR", 1000.0, 1, datetime(2024, 12, 31, 23, 0), "SP", 4),
+        ("p4", "CELULAR", 1000.0, 1, datetime(2024, 12, 15, 12, 0), "SP", 4),
         ("p5", "SOUNDBAR", 900.0, 1, datetime(2025, 4, 2, 11, 0), "AC", 5),
         ("p6", "GELADEIRA", 2000.0, 1, datetime(2025, 5, 3, 12, 0), "BA", 6),
     ]
